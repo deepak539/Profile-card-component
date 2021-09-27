@@ -1,0 +1,204 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 2em;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.125rem;
+  background: #19a2ae;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.top-pattern,
+.bottom-pattern {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+}
+
+@media (max-width: 700px) {
+  .top-pattern,
+  .bottom-pattern {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 350px) {
+  .top-pattern,
+  .bottom-pattern {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.top-pattern {
+  top: -200px;
+  left: -50px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media (max-width: 700px) {
+  .top-pattern {
+    top: -100px;
+    left: -200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .top-pattern {
+    top: -80px;
+    left: -200px;
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+}
+
+.bottom-pattern {
+  bottom: -200px;
+  right: -50px;
+}
+
+@media (max-width: 700px) {
+  .bottom-pattern {
+    bottom: -100px;
+    right: -200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .bottom-pattern {
+    bottom: -80px;
+    right: -200px;
+  }
+}
+
+.card {
+  width: 400px;
+  background: white;
+  border-radius: 20px;
+}
+
+@media (max-width: 475px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 350px) {
+  .card {
+    width: 250px;
+  }
+}
+
+.card-header {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-img {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -3em;
+}
+
+.user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em;
+}
+
+.user-info h1 {
+  font-size: 1rem;
+}
+
+.user-info p {
+  font-size: 1rem;
+  margin: 0 .5em;
+  color: #6a6f81;
+}
+
+.user-location {
+  color: #6a6f81;
+  margin: -1em;
+  font-size: .8rem;
+}
+
+footer {
+  border-top: 1px solid #969696;
+  margin-top: 3em;
+  padding: 1em 2em;
+}
+
+@media (max-width: 475px) {
+  footer {
+    padding: 1em;
+  }
+}
+
+footer .account-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .account-info .followers,
+footer .account-info .likes,
+footer .account-info .photos {
+  text-align: center;
+}
+
+footer .account-info .followers-count,
+footer .account-info .likes-count,
+footer .account-info .photos-count {
+  font-size: 1rem;
+}
+
+footer .account-info .followers-title,
+footer .account-info .likes-title,
+footer .account-info .photos-title {
+  color: #6a6f81;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: .3ch;
+}
+/*# sourceMappingURL=style.css.map */

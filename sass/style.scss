@@ -1,0 +1,155 @@
+@import 'config';
+
+body{
+  width: 100%;
+  height: 100vh;
+  padding: 2em;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.125rem;
+  background: $Dark-cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.top-pattern,
+.bottom-pattern{
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+
+  @media (max-width: 700px) {
+    width: 450px;
+    height: 450px;
+  }
+
+  @media (max-width: 350px) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.top-pattern{
+  top: -200px;
+  left: -50px;
+  transform: rotate(90deg);
+
+  @media (max-width: 700px) {
+    top: -100px;
+    left: -200px;
+  }
+
+  @media (max-width: 350px) {
+    top: -80px;
+    left: -200px;
+    transform: rotate(120deg);
+  }
+}
+
+.bottom-pattern{
+  bottom: -200px;
+  right: -50px;
+
+  @media (max-width: 700px) {
+    bottom: -100px;
+    right: -200px;
+  }
+
+  @media (max-width: 350px) {
+    bottom: -80px;
+    right: -200px;
+  }
+}
+
+.card{
+  width: 400px;
+  background: white;
+  border-radius: 20px;
+
+  @media (max-width: 475px) {
+    width: 300px;
+  }
+
+  @media (max-width: 350px) {
+    width: 250px;
+  }
+
+  &-header{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-img{
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: -3em;
+  }
+
+  &-info{
+    display: flex;
+    margin: 1em;
+
+    h1{
+      font-size: 1rem;
+    }
+    
+    p{
+      font-size: 1rem;
+      margin: 0 .5em;
+      color: $Dark-grayish-blue;
+    }
+  }
+
+  &-location{
+    color: $Dark-grayish-blue;
+    margin: -1em;
+    font-size: .8rem;
+  }
+}
+
+footer{
+  border-top: 1px solid $Dark-gray;
+  margin-top: 3em;
+  padding: 1em 2em;
+
+  @media (max-width: 475px) {
+    padding: 1em;
+  }
+
+  .account-info{
+    display: flex;
+    justify-content: space-around;
+
+    .followers,
+    .likes,
+    .photos{
+      text-align: center;
+    }
+
+    .followers-count,
+    .likes-count, 
+    .photos-count{
+      font-size: 1rem;
+    }
+
+    .followers-title,
+    .likes-title,
+    .photos-title{
+      color: $Dark-grayish-blue;
+      font-weight: 700;
+      font-size: .7rem;
+      letter-spacing: .3ch;
+    }
+  }
+}
